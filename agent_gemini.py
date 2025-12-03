@@ -5,6 +5,7 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.tools import Tool
 from google.api_core.exceptions import ResourceExhausted
+#Week 1
 # Load environment variables
 load_dotenv()
 # 1️.Create LLM
@@ -28,7 +29,7 @@ Topic: {topic}
 
 chain = LLMChain(llm=llm, prompt=prompt)
 
-# 4️. Generate response with error handling
+# 4️. Generate response
 
 topic = "LangChain in simple words"
 result = chain.run({"topic": topic})
@@ -56,7 +57,7 @@ while True:
     if user_input.lower() in ["exit", "quit"]:
         break
     messages = [
-        {"role": "system", "content": "You are a helpful AI assistant."},
+        {"role": "system", "content": "You are a helpful AI assis tant."},
         {"role": "user", "content": user_input}
     ]
     response = llm.invoke(messages)
