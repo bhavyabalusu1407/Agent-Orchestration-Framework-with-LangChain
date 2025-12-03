@@ -57,7 +57,7 @@ while True:
     if user_input.lower() in ["exit", "quit"]:
         break
     messages = [
-        {"role": "system", "content": "You are a helpful AI assis tant."},
+        {"role": "system", "content": "You are a helpful AI assistant."},
         {"role": "user", "content": user_input}
     ]
     response = llm.invoke(messages)
