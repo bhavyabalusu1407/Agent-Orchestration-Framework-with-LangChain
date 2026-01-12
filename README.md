@@ -72,9 +72,9 @@ The project is developed week-wise (Week 1 to Week 8) following Agile methodolog
 
 ## How to Run the Project
 
-### 1️⃣ Create and Activate Virtual Environment
+1️⃣ Create and Activate Virtual Environment
 
-```bash
+bash
 python -m venv venv
 venv\Scripts\activate
 
@@ -132,11 +132,14 @@ Run Workflow
 
 Deployment
 
-This project is currently demonstrated via local deployment:
+This project is currently demonstrated via:
 
-Backend API: http://127.0.0.1:8000
+Local Backend API: http://127.0.0.1:8000
 
-Frontend UI: http://localhost:8501
+Local Frontend UI: http://localhost:8501
+
+Live Deployment: https://agent-orchestration-framework-with-beige.vercel.app/
+
 
 Testing & Evaluation
 
@@ -161,7 +164,7 @@ License
 This project is licensed under the MIT License.
 See the LICENSE file for details.
 
+
 Author
 
 Bhavya Balusu
-Agent-Orchestration Framework with LangChain
