@@ -22,25 +22,25 @@ The project is developed week-wise (Week 1 to Week 8) following Agile methodolog
 
 ## Project Structure
 .
-├── README.md
-├── LICENSE
-├── requirements.txt
-├── .gitignore
-├── .env.example
-├── doc/
-│ ├── Agile_Documentation.xlsx
-│ ├── Sample_Defect_tracker.xlsx
-| ├── Sample_Unit_Test_Plan.xlsx
-├── src/
-│ ├── week1.py
-│ ├── week2.py
-│ ├── week3.py
-│ ├── week4.py
-│ ├── week5.py
-│ ├── week6.py
-│ ├── week7.py # FastAPI Backend
-│ └── week8.py # Streamlit Frontend
-└── venv/
+├── README.md  
+├── LICENSE  
+├── requirements.txt  
+├── .gitignore  
+├── .env.example  
+├── doc/  
+│   ├── Agile_Documentation.xlsx  
+│   ├── Sample_Defect_tracker.xlsx  
+│   └── Sample_Unit_Test_Plan.xlsx  
+├── src/  
+│   ├── week1.py  
+│   ├── week2.py  
+│   ├── week3.py  
+│   ├── week4.py  
+│   ├── week5.py  
+│   ├── week6.py  
+│   ├── week7.py  # FastAPI Backend  
+│   └── week8.py  # Streamlit Frontend  
+└── venv/  
 
 
 ---
@@ -49,23 +49,33 @@ The project is developed week-wise (Week 1 to Week 8) following Agile methodolog
 
 ### Milestone 1 (Weeks 1–2): Environment Setup & Basic Agent
 - LangChain setup
+  
 - Prompt templates and LLM chains
+  
 - Console-based agent interaction
 
 ### Milestone 2 (Weeks 3–4): Tool Integration
 - Calculator and mock APIs
+  
 - Tool invocation via agents
+  
 - Error handling
 
 ### Milestone 3 (Weeks 5–6): Multi-Agent Orchestration & Memory
 - Research, Summarizer, Email agents
+  
 - Agent communication
+  
 - Individual and shared memory
+  
 
 ### Milestone 4 (Weeks 7–8): Workflow Automation & UI
 - Full workflow: Research → Summarize → Compose Email
-- FastAPI backend with REST endpoints
+  
+- FastAPI backend with REST endpoint
+  
 - Streamlit frontend UI
+  
 - Logs, feedback, memory inspection
 
 ---
@@ -74,30 +84,51 @@ The project is developed week-wise (Week 1 to Week 8) following Agile methodolog
 
 1️⃣ Create and Activate Virtual Environment
 
-bash
+```bash
+
 python -m venv venv
+
+# Windows
+
 venv\Scripts\activate
+
+# macOS / Linux
+
+source venv/bin/activate
+
+```
 
 2️⃣ Install Dependencies
 
+```bash
+
 pip install -r requirements.txt
+
+```
 
 3️⃣ Run FastAPI Backend (Week 7)
 
+```bash
+
 uvicorn src.week7:app --reload
 
+```
 
 Open API Docs: http://127.0.0.1:8000/docs
 
 4️⃣ Run Streamlit Frontend (Week 8)
 
+```bash
+
 streamlit run src/week8.py
 
+```
 
 Open UI: http://localhost:8501
 
+---
 
-API Endpoints (Week 7)
+## API Endpoints (Week 7)
 
 | Method | Endpoint               | Description              |
 | ------ | ---------------------- | ------------------------ |
@@ -113,58 +144,87 @@ API Endpoints (Week 7)
 | POST   | `/evaluation/feedback` | Submit workflow feedback |
 | GET    | `/logs/{workflow_id}`  | Get workflow logs        |
 
+Example: Run Single Agent (POST `/agent/run`)
 
-Run Single Agent
+```json
+
 {
+
   "agent_name": "research",
+
   "input": "LangChain multi-agent systems"
 }
 
+```
 
+Example: Run Workflow (POST `/workflow/run`)
 
-Run Workflow
+```json
 
 {
   "topic": "LangChain multi-agent systems",
+
   "recipient": "mentor@example.com"
 }
+```
 
+---
 
-Deployment
+## Deployment
 
 This project is currently demonstrated via:
 
-Local Backend API: http://127.0.0.1:8000
+- Local Backend API: http://127.0.0.1:8000
+  
+- Local Frontend UI: http://localhost:8501
+  
+- Live Deployment: https://agent-orchestration-framework-with-beige.vercel.app/
+  
+---
 
-Local Frontend UI: http://localhost:8501
+## Testing & Evaluation
 
-Live Deployment: https://agent-orchestration-framework-with-beige.vercel.app/
+- Manual testing using Swagger UI (`/docs`)
 
+- Workflow logs verified via `/logs/{workflow_id}`
 
-Testing & Evaluation
+- Agent memory verified via `/memory/{agent_name}`
+    
+- Feedback captured using `/evaluation/feedback` endpoint
 
-Manual testing using Swagger UI
+Run automated tests:
+```bash
+pytest -q
+```
 
-Workflow logs verified via /logs/{workflow_id}
+See `doc/Sample_Unit_Test_Plan.xlsx` and `doc/Sample_Defect_tracker.xlsx` for test plans and defect logs.
 
-Agent memory verified via /memory/{agent_name}
+---
 
-Feedback captured using /evaluation/feedback endpoint
+## Documentation Included
 
+✅ Agile Documentation (`doc/Agile_Documentation.xlsx`)  
 
-Documentation Included
+✅ Unit Testing & Defect Tracker (`doc/Sample_Unit_Test_Plan.xlsx`, `doc/Sample_Defect_tracker.xlsx`)  
 
-✅ Agile Documentation
-✅ Unit Testing & Defect Tracker
-✅ README File
-✅ MIT License
+✅ README File (this file)
 
-License
+✅ MIT License (`LICENSE`)
 
-This project is licensed under the MIT License.
-See the LICENSE file for details.
+---
 
+## License
 
-Author
+This project is licensed under the MIT License.  
 
-Bhavya Balusu
+See the `LICENSE` file for details.
+
+---
+
+## Author
+
+Bhavya Balusu  
+
+Agent-Orchestration Framework with LangChain
+
+---
