@@ -21,7 +21,7 @@ The project is developed week-wise (Week 1 to Week 8) following Agile methodolog
 ---
 
 ## Project Structure
-.
+
 ├── README.md  
 ├── LICENSE  
 ├── requirements.txt  
