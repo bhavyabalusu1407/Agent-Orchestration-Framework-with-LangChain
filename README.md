@@ -11,7 +11,7 @@ The project is developed week-wise (Week 1 to Week 8) following Agile methodolog
 ## Key Features
 
 - Multi-agent collaboration: Research Agent, Summarizer Agent, Email Agent  
-- Tool integration: Calculator, Mock APIs  
+- Tool integration: Calculator, Mock API
 - Individual and shared memory management  
 - REST API backend using FastAPI  
 - Frontend UI using Streamlit  
